@@ -4,7 +4,7 @@ import TopBanner from './TopBanner';
 import '../css/Header.scss';
 import { FiShoppingCart, FiUserPlus, FiSearch } from "react-icons/fi";
 
-const Header = () => {
+const Header = ({ cart }) => {
     const [on, setOn] = useState(false);
     useEffect(() => {
         const scrollEvent = () => {
@@ -32,7 +32,7 @@ const Header = () => {
                     <li><FiUserPlus /></li>
                     <li className='cart_num'>
                         <FiShoppingCart />
-                        <span>0</span>
+                        <span>{cart.length}</span>
                     </li>
                     <li><FiSearch /></li>
                 </ul>
