@@ -4,6 +4,7 @@ import Header from './component/Header';
 import Main from './pages/Main';
 import Itm from './shop/Itm';
 import Cart from './shop/Cart';
+import Category from './shop/Category';
 import './css/reset.css';
 import './css/ShopDetail.scss';
 import axios from 'axios';
@@ -43,19 +44,22 @@ const App = () => {
     }, [])
     return (
         <>
-            <Header cart={cart} />
             {
                 itm
                     ?
-                    <Routes>
-                        <Route path='/' element={<Main />} />
-                        <Route path='/cart' element={<Cart cart={cart} />} />
-                        <Route path='/shopList' element={<List shopList={itm} />} />
-                        <Route path='/shopItm/:itm' element={<Itm shopList={itm} cart={cart} setCart={setCart} />} />
-                    </Routes>
+                    <div className='Wrapper'>
+                        <Header cart={cart} shopList={itm} />
+                        <Routes>
+                            <Route path='/' element={<Main shopList={itm} />} />
+                            <Route path='/cart' element={<Cart cart={cart} />} />
+                            <Route path='/shopList' element={<List shopList={itm} />} />
+                            <Route path='/shopList/:cate' element={<Category shopList={itm} />} />
+                            <Route path='/shopItm/:itm' element={<Itm shopList={itm} cart={cart} setCart={setCart} />} />
+                        </Routes>
+                        <Footer />
+                    </div>
                     : <div>로딩 중</div>
             }
-            <Footer />
         </>
     )
 }
