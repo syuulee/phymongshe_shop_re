@@ -2,7 +2,6 @@
 
 .MainSlide {
     position: relative;
-    padding: 0 0 0 0;
     transform: translateY(-8rem);
     height: calc(100vh - 18rem);
 
@@ -10,24 +9,25 @@
         transition-duration: 0.5ms;
     }
 
+
     .itm {
         position: relative;
         height: calc(100vh - 10rem);
+        color: common.$wColor;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        color: common.$wColor;
 
         &.itm01 {
-            background-image: url(../../public/assets/img/main01.jpg);
+            background-image: url(../../public/assets/img/main_m01.jpg);
         }
 
         &.itm02 {
-            background-image: url(../../public/assets/img/main02.jpg);
+            background-image: url(../../public/assets/img/main_m02.jpg);
         }
 
         &.itm03 {
-            background-image: url(../../public/assets/img/main03.jpg);
+            background-image: url(../../public/assets/img/main_m03.jpg);
         }
 
         .inner {
@@ -41,6 +41,7 @@
                 margin: 0 0 1rem 0;
                 font-size: 1.4rem;
                 text-transform: uppercase;
+
             }
 
             p {
@@ -80,6 +81,8 @@
                 font-size: 0;
                 border: none;
                 outline: none;
+
+
             }
 
             &.slick-active button {

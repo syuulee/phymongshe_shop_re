@@ -1,24 +1,22 @@
 import React from 'react';
-import MainSlide from '../component/MainSlide';
-import MainTab from '../component/MainTab';
-import MainCategory from '../component/MainCategory';
+import MainSlide from '../components/MainSlide';
+import Itm from '../shop/Itm';
+import MainTab from '../components/MainTab';
 import '../css/Main.scss'
-import CategorySlider from '../component/CategorySlider';
+import MainCategory from '../components/MainCategory';
+import MainProuctSlide from '../components/MainProuctSlide';
 
 const Main = ({ shopList }) => {
     return (
         <>
             <MainSlide />
-            <CategorySlider shopList={shopList} category={'liquid'} tit={'BEST PRODUCT'} des={'피몽쉐 베스트라인 어쩌고 저쩌고'} />
-            <MainTab shopList={shopList} />
-            <MainCategory shopList={shopList} category={'cream'} tit={'BEST PRODUCT'} des={'피몽쉐 베스트라인 어쩌고 저쩌고'} bg={'#f7f7f7'} />
-            <MainCategory shopList={shopList} category={'gel'} />
-            <MainCategory shopList={shopList} category={'pencil'} />
-            <MainCategory shopList={shopList} category={'liquid'} />
+            <MainProuctSlide shopList={shopList} category={'pencil'} tit={'BEST PRODUCT'} des={'피몽쉐 마인드풀 라운지 BEST PRODUCT'} arrow={true} dots={true} />
+            <MainProuctSlide shopList={shopList} category={'liquid'} tit={'NEW PRODUCT'} des={'피몽쉐 마인드풀 라운지 new PRODUCT'} arrow={true} dots={false} bg />
             <MainCategory shopList={shopList} category={'powder'} />
-            <MainCategory shopList={shopList} category={'concealer'} />
+            <MainCategory shopList={shopList} category={'liquid'} bg />
+            <MainTab shopList={shopList} arrow={true} dots={false} />
         </>
     )
 }
 
-export default Main;
+export default Main

@@ -14,14 +14,12 @@
         left: 50%;
         transform: translateY(-50%);
 
-        &.Left {
+        &.left {
             margin: 0 0 0 -200px;
         }
 
-        &.Right {
+        &.right {
             margin: 0 0 0 200px;
         }
     }
-
-
 }
